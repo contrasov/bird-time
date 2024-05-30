@@ -10,8 +10,6 @@
 </template>
   
 <script>
-import music from '../assets/music.mp3'
-
   export default {
     data() {
       return {
@@ -37,7 +35,7 @@ import music from '../assets/music.mp3'
         let weekday = now.toLocaleDateString('pt-BR', { weekday: 'long' });
         this.day = weekday.charAt(0).toUpperCase() + weekday.slice(1);
   
-        if (hours === '00' && minutes === '2' && seconds === '05') {
+        if (hours === '00' && minutes === '08' && seconds === '10') {
           this.playSound();
         }
       },
@@ -48,7 +46,7 @@ import music from '../assets/music.mp3'
     created() {
       this.fetchTime();
       setInterval(this.fetchTime, 1000);
-      this.audio = new Audio(music);
+      this.audio = new Audio('/music.mp3');
     }
   };
 </script>

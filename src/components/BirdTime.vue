@@ -35,7 +35,7 @@
         let weekday = now.toLocaleDateString('pt-BR', { weekday: 'long' });
         this.day = weekday.charAt(0).toUpperCase() + weekday.slice(1);
   
-        if (hours === '00' && minutes === '10' && seconds === '10') {
+        if (hours === '23' && minutes === '55' && seconds === '04') {
           this.playSound();
         }
       },
